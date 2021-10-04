@@ -1,21 +1,53 @@
 // Assignment code here
+// called variables
+const characters = {
+lower: 'abcdefghijklmnopqrstuvwxyz',
+upper: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+num: '123456789',
+spec: "!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
+};
+
+
 function generatePassword() {
- // prompt of password length
-  window.prompt("How many characters would you like?")
+ var passwordGen = "";
+  // prompt of password length
+ var length = window.prompt("How many characters would you like?")
+// if they select anything less than 8 or more than 128
+ if (length < 8 || length > 128){
+  alert("Length must be between 8 and 128 characters")
+};
+ 
+  
 
   // prompt of lowercase letters
-  window.prompt("Would you like lowercase letters in your password?")
-
-  // prompt of uppercase letters
-  window.prompt("Would you like uppercase letters in your password?")
-
+  var lower = confirm("Would you like lowercase letters in your password?")
+  if (lower) {
+    passwordGen += characters.lower
+  };
+ // prompt of uppercase letters
+  var upper = confirm("Would you like uppercase letters in your password?")
+  if (upper) {
+    passwordGen += characters.upper
+  };
   // prompt of numbers
-  window.prompt("Would you like numbers in your password?")
-
+  var num = confirm("Would you like numbers in your password?")
+  if (num) {
+    passwordGen += characters.num
+  };
   // prompt of special characters
-  window.prompt("Would you like special characters in your password?")
+  var spec = confirm("Would you like special characters in your password?")
+  if (spec) {
+    passwordGen += characters.spec
+  };
+  console.log(spec);
+  // variable of password
+  var password = "";
+  for (let i = 0; i < length; i++) {
+    password += passwordGen[Math.floor(Math.random() * passwordGen.length)]
+  }
 
-  return "This is the password";
+// The final password
+  return password;
 }
 
 // Get references to the #generate element
