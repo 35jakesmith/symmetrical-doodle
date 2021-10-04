@@ -22,5 +22,7 @@ WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 
 ## Link to Website
+https://35jakesmith.github.io/symmetrical-doodle/
 
 ## Screenshot of application
+![image](https://user-images.githubusercontent.com/88916856/135931891-799fdc29-1359-42c3-bf03-f4f4e7339d13.png)
