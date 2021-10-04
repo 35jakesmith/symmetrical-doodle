@@ -9,16 +9,17 @@ spec: "!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
 
 
 function generatePassword() {
- var passwordGen = "";
   // prompt of password length
- var length = window.prompt("How many characters would you like?")
-// if they select anything less than 8 or more than 128
- if (length < 8 || length > 128){
-  alert("Length must be between 8 and 128 characters")
-};
- 
+  var length = window.prompt("How many characters would you like?")
+  // if they select anything less than 8 or more than 128
+  if (length < 8 || length > 128){
+    alert("Password length must be between 8 and 128 characters. Please click Generate Password again.")
+    return ""
+  }
   
-
+  
+  
+  var passwordGen = "";
   // prompt of lowercase letters
   var lower = confirm("Would you like lowercase letters in your password?")
   if (lower) {
