@@ -3,8 +3,6 @@
 This application will generate a random password according to the criteria which the user prefers. A few simple clicks and a password will be generated.
 
 ## Description
-
-```
 GIVEN I need a new, secure password
 WHEN I click the button to generate a password
 THEN I am presented with a series of prompts for password criteria
